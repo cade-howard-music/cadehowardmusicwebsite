@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cade Howard — Guitarist & Vocalist, Louisville KY</title>
+<meta name="description" content="Cade Howard is a Louisville, KY guitarist and vocalist with 20 years of stage experience across blues, jazz, classic rock, pop, and progressive rock. Available for booking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink-black: #10141B;
+    --ink-black-2: #171D27;
+    --paper: #E9ECF1;
+    --paper-dim: #9FAAB8;
+    --steel: #6E8CAE;
+    --steel-dim: #435E7A;
+    --slate: #3E5164;
+    --gold: #D6A244;
+    --line: rgba(233,236,241,0.14);
+    --line-strong: rgba(233,236,241,0.26);
+
+    --display: 'Bricolage Grotesque', 'Inter', sans-serif;
+    --body: 'Inter', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink-black);
+    color:var(--paper);
+    font-family:var(--body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    font-size:16px;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important;}
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--steel);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(16,20,27,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1160px; margin:0 auto; padding:20px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-mark{
+    font-family:var(--display); font-weight:600; font-size:1.2rem;
+    letter-spacing:0.01em;
+    text-decoration:none;
+  }
+  .nav-links{
+    display:flex; gap:30px; list-style:none;
+    font-family:var(--mono); font-size:0.85rem; letter-spacing:0.02em;
+  }
+  .nav-links a{text-decoration:none; opacity:0.85; transition:opacity .2s, color .2s;}
+  .nav-links a:hover{opacity:1; color:var(--steel);}
+  .nav-book{
+    font-family:var(--mono); font-size:0.82rem; letter-spacing:0.02em;
+    border:1px solid var(--gold); color:var(--gold);
+    padding:10px 18px; text-decoration:none; white-space:nowrap;
+    transition:background .2s, color .2s;
+  }
+  .nav-book:hover{background:var(--gold); color:var(--ink-black);}
+
+  @media (max-width:760px){
+    .nav-links{display:none;}
+    .nav-book{padding:9px 14px; font-size:0.75rem;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:86vh;
+    display:flex;
+    align-items:flex-end;
+    background:
+      linear-gradient(180deg, rgba(16,20,27,0.45) 0%, rgba(16,20,27,0.6) 55%, var(--ink-black) 100%),
+      url('images/blue-stage.jpg') center 20% / cover no-repeat;
+  }
+  .hero-inner{
+    width:100%;
+    padding:80px 32px 56px;
+    max-width:1160px;
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    font-family:var(--mono);
+    font-size:0.88rem;
+    letter-spacing:0.06em;
+    color:var(--steel);
+    margin-bottom:18px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .hero-eyebrow::before{
+    content:"";
+    width:26px; height:1px; background:var(--steel);
+    display:inline-block;
+  }
+  h1.hero-title{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(3.2rem, 9vw, 7rem);
+    line-height:0.96;
+    letter-spacing:-0.01em;
+  }
+  .hero-sub{
+    margin-top:22px;
+    max-width:36em;
+    font-size:1.18rem;
+    color:var(--paper-dim);
+    font-weight:400;
+  }
+  .hero-genres{
+    margin-top:20px;
+    font-family:var(--mono);
+    font-size:0.9rem;
+    color:var(--paper-dim);
+    letter-spacing:0.01em;
+  }
+  .hero-genres span{color:var(--paper);}
+  .hero-ctas{
+    margin-top:36px;
+    display:flex; gap:16px; flex-wrap:wrap;
+  }
+  .btn{
+    font-family:var(--mono);
+    font-size:0.88rem;
+    letter-spacing:0.01em;
+    text-decoration:none;
+    padding:14px 26px;
+    display:inline-block;
+    border:1px solid var(--paper);
+    transition:background .2s, color .2s, border-color .2s;
+  }
+  .btn-solid{background:var(--steel); border-color:var(--steel); color:var(--ink-black);}
+  .btn-solid:hover{background:var(--paper); border-color:var(--paper);}
+  .btn-outline{color:var(--paper);}
+  .btn-outline:hover{background:var(--paper); color:var(--ink-black);}
+
+  /* ---------- SECTION SCAFFOLDING ---------- */
+  section{padding:100px 0;}
+  .section-head{
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:24px; margin-bottom:52px; flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+    padding-bottom:20px;
+  }
+  .eyebrow{
+    font-family:var(--mono); font-size:0.85rem; letter-spacing:0.04em;
+    color:var(--steel);
+  }
+  h2.section-title{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2rem, 4vw, 2.9rem);
+    letter-spacing:-0.01em;
+    margin-top:6px;
+  }
+  .section-note{
+    font-family:var(--mono); font-size:0.85rem; color:var(--paper-dim); max-width:22em; text-align:right;
+  }
+  @media (max-width:700px){
+    .section-note{text-align:left;}
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .about-photo{
+    position:relative;
+  }
+  .about-photo img{
+    width:100%;
+    filter:grayscale(15%) contrast(1.05);
+    border:1px solid var(--line-strong);
+  }
+  .about-photo-cap{
+    font-family:var(--mono); font-size:0.8rem; color:var(--paper-dim);
+    margin-top:10px; letter-spacing:0.01em;
+  }
+  .about-bio p{
+    margin-bottom:1.2em;
+    font-size:1.08rem;
+    color:var(--paper-dim);
+    max-width:46em;
+  }
+  .about-bio p strong{color:var(--paper); font-weight:600;}
+
+  .stat-strip{
+    margin-top:44px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border-top:1px solid var(--line-strong);
+    border-left:1px solid var(--line-strong);
+  }
+  .stat{
+    border-right:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+    padding:20px 18px;
+  }
+  .stat-num{
+    font-family:var(--display); font-weight:700; font-size:1.9rem; color:var(--steel);
+    line-height:1;
+  }
+  .stat-label{
+    font-family:var(--mono); font-size:0.78rem;
+    color:var(--paper-dim); margin-top:8px; display:block;
+  }
+  @media (max-width:760px){
+    .about-grid{grid-template-columns:1fr;}
+    .stat-strip{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- BANDS (ticket stub cards) ---------- */
+  .band-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .stub{
+    background:var(--ink-black-2);
+    border:1px solid var(--line-strong);
+    position:relative;
+    overflow:hidden;
+  }
+  .stub-photo{
+    height:230px;
+    overflow:hidden;
+    position:relative;
+    border-bottom:1px dashed var(--line-strong);
+  }
+  .stub-photo img{
+    width:100%; height:100%; object-fit:cover;
+    filter:saturate(0.85);
+    transition:transform .5s ease;
+  }
+  .stub:hover .stub-photo img{transform:scale(1.05);}
+  .stub-photo::after{
+    content:"";
+    position:absolute; left:-8px; bottom:-8px; width:16px; height:16px;
+    background:var(--ink-black); border-radius:50%;
+  }
+  .stub-photo::before{
+    content:"";
+    position:absolute; right:-8px; bottom:-8px; width:16px; height:16px;
+    background:var(--ink-black); border-radius:50%;
+  }
+  .stub-body{padding:22px 22px 26px;}
+  .stub-kicker{
+    font-family:var(--mono); font-size:0.78rem;
+    color:var(--steel); display:block; margin-bottom:8px;
+  }
+  .stub-name{
+    font-family:var(--display); font-weight:600; font-size:1.5rem; margin-bottom:6px;
+  }
+  .stub-genre{
+    font-family:var(--mono); font-size:0.82rem; color:var(--paper-dim); margin-bottom:14px; display:block;
+  }
+  .stub-desc{font-size:0.96rem; color:var(--paper-dim);}
+
+  .alumni-row{
+    margin-top:40px;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+  }
+  .alumni-label{
+    font-family:var(--mono); font-size:0.8rem;
+    color:var(--paper-dim); margin-bottom:18px; display:block;
+  }
+  .alumni-list{
+    display:flex; flex-wrap:wrap; gap:14px;
+  }
+  .alumni-chip{
+    display:flex; align-items:center; gap:10px;
+    border:1px solid var(--line-strong);
+    padding:8px;
+    background:var(--ink-black-2);
+  }
+  .alumni-chip img{width:36px; height:36px; object-fit:cover; filter:grayscale(60%);}
+  .alumni-chip-text{padding-right:10px;}
+  .alumni-chip-name{font-family:var(--display); font-size:0.98rem; font-weight:600;}
+  .alumni-chip-sub{font-family:var(--mono); font-size:0.75rem; color:var(--paper-dim); display:block; margin-top:2px;}
+
+  @media (max-width:900px){
+    .band-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- MUSIC & VIDEO ---------- */
+  .media-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:start;
+  }
+  .bandcamp-embed{
+    border:1px solid var(--line-strong);
+    background:var(--ink-black-2);
+    padding:4px;
+  }
+  .bandcamp-embed iframe{width:100%; height:472px; border:0;}
+  .platform-links{
+    display:grid;
+    gap:14px;
+  }
+  .platform-card{
+    display:flex; align-items:center; justify-content:space-between;
+    border:1px solid var(--line-strong);
+    background:var(--ink-black-2);
+    padding:20px 22px;
+    text-decoration:none;
+    transition:border-color .2s, background .2s;
+  }
+  .platform-card:hover{border-color:var(--steel); background:rgba(110,140,174,0.08);}
+  .platform-name{
+    font-family:var(--display); font-weight:600; font-size:1.15rem;
+  }
+  .platform-sub{
+    font-family:var(--mono); font-size:0.8rem; color:var(--paper-dim); margin-top:4px; display:block;
+  }
+  .platform-arrow{
+    font-family:var(--mono); font-size:1.1rem; color:var(--steel);
+  }
+  @media (max-width:800px){
+    .media-grid{grid-template-columns:1fr;}
+    .bandcamp-embed iframe{height:420px;}
+  }
+
+  /* ---------- VIDEO GRID ---------- */
+  .video-section-label{
+    font-family:var(--mono); font-size:0.85rem; color:var(--paper-dim);
+    margin:60px 0 24px;
+    padding-top:40px;
+    border-top:1px solid var(--line);
+  }
+  .video-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+  .video-frame{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+    background:var(--ink-black-2);
+    border:1px solid var(--line-strong);
+    overflow:hidden;
+  }
+  .video-frame iframe{
+    position:absolute; top:0; left:0; width:100%; height:100%; border:0;
+  }
+  @media (max-width:900px){
+    .video-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:600px){
+    .video-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-auto-rows:200px;
+    gap:10px;
+  }
+  .gallery-grid a{display:block; width:100%; height:100%; overflow:hidden;}
+  .gallery-grid img{
+    width:100%; height:100%; object-fit:cover;
+    filter:saturate(0.9);
+    transition:transform .4s ease, filter .4s ease;
+  }
+  .gallery-grid a:hover img{transform:scale(1.06); filter:saturate(1.02);}
+  .g-tall{grid-row:span 2;}
+  .g-wide{grid-column:span 2;}
+  @media (max-width:900px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr); grid-auto-rows:170px;}
+    .g-wide{grid-column:span 2;}
+  }
+  @media (max-width:520px){
+    .gallery-grid{grid-template-columns:1fr; grid-auto-rows:220px;}
+    .g-wide, .g-tall{grid-column:span 1; grid-row:span 1;}
+  }
+
+  /* ---------- BOOKING ---------- */
+  .booking{
+    background:var(--slate);
+    background-image:linear-gradient(160deg, var(--slate) 0%, #23303c 100%);
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .booking .section-head{border-bottom-color:rgba(233,236,241,0.2);}
+  .booking-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+  .booking-list{list-style:none; display:grid; gap:14px;}
+  .booking-list li{
+    display:flex; gap:12px; font-size:1rem; color:var(--paper);
+  }
+  .booking-list li::before{
+    content:"—";
+    color:var(--gold);
+    font-family:var(--mono);
+  }
+  .contact-block{
+    border:1px solid rgba(233,236,241,0.3);
+    background:rgba(16,20,27,0.28);
+    padding:34px;
+  }
+  .contact-label{
+    font-family:var(--mono); font-size:0.8rem;
+    color:var(--gold); margin-bottom:10px; display:block;
+  }
+  .contact-value{
+    font-family:var(--display); font-size:1.5rem; font-weight:600;
+    text-decoration:none; display:block; margin-bottom:26px;
+    word-break:break-word;
+  }
+  .contact-value:hover{color:var(--steel);}
+  .contact-block .btn{width:100%; text-align:center;}
+  @media (max-width:800px){
+    .booking-grid{grid-template-columns:1fr; gap:40px;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:48px 0 40px;
+  }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;
+  }
+  .footer-mark{font-family:var(--display); font-weight:600; font-size:1.05rem;}
+  .footer-socials{
+    display:flex; gap:22px; list-style:none;
+    font-family:var(--mono); font-size:0.82rem;
+  }
+  .footer-socials a{text-decoration:none; opacity:0.8; transition:opacity .2s;}
+  .footer-socials a:hover{opacity:1; color:var(--steel);}
+  .footer-fine{
+    font-family:var(--mono); font-size:0.78rem; color:var(--paper-dim); margin-top:26px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <nav class="nav-inner">
+    <a class="nav-mark" href="#top">Cade Howard</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#bands">Bands</a></li>
+      <li><a href="#music">Music &amp; Video</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#booking">Booking</a></li>
+    </ul>
+    <a class="nav-book" href="#booking">Book Cade</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="padding:0;">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Louisville, Kentucky — Guitarist &amp; Vocalist</p>
+      <h1 class="hero-title">Cade<br>Howard</h1>
+      <p class="hero-sub">Twenty years of stage time across blues, jazz, classic rock, pop, and progressive rock — in bands, behind a mic, and on the fretboard, wherever the gig needs it.</p>
+      <p class="hero-genres">Blues &middot; Jazz &middot; Classic Rock &middot; Pop &middot; Progressive Rock &middot; <span>and whatever the room needs</span></p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#booking">Book a date</a>
+        <a class="btn btn-outline" href="#music">Hear the music</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">About</span>
+          <h2 class="section-title">Twenty years, five genres, one guitarist</h2>
+        </div>
+        <p class="section-note">Based in Louisville, KY — available for club dates, private events, sit-ins, and festival slots around the region.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="images/bw-profile.jpg" alt="Cade Howard singing into a microphone on stage">
+          <p class="about-photo-cap">Cade Howard, live.</p>
+        </div>
+        <div class="about-bio">
+          <p><strong>Cade Howard has spent the last twenty years on stages across Kentucky</strong>, moving fluidly between blues shuffles, jazz standards, deep prog cuts, and pop hooks — sometimes in the same set. A Louisville-based guitarist and vocalist, he currently splits his time between three very different projects: <strong>Night Parade</strong> (alternative rock), <strong>Sporelord</strong> (heavy psych rock), and <strong>Oddjob</strong>, a spy-themed outfit built around reinvented classic rock, dance, and funk covers.</p>
+          <p>Cade has been writing and recording his own music since high school, and that same ear carries over off stage: he records and produces music for other regional artists, and works as a live sound engineer at venues around Louisville. Earlier bands include Zardoz and Hounds &amp; Horns out of Owensboro, and Ted Tyro in Louisville — and along the way, he spent eight years teaching rock music at School of Rock Louisville.</p>
+          <p>Whether the gig calls for a tight covers set, an original headline show, or a sit-in that needs someone who can read the room and follow the changes, Cade brings two decades of stage time and a catalog that runs from Muddy Waters to Rush.</p>
+          <div class="stat-strip">
+            <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Years on stage</span></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">Active bands</span></div>
+            <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Bands played in KY region</span></div>
+            <div class="stat"><span class="stat-num">5</span><span class="stat-label">Genres, on call</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bands">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Currently Playing</span>
+          <h2 class="section-title">Three bands, three different rooms</h2>
+        </div>
+        <p class="section-note">Each project pulls from a different corner of Cade's range — booked separately or as a package.</p>
+      </div>
+
+      <div class="band-grid">
+        <div class="stub">
+          <div class="stub-photo"><img src="images/night-parade.jpg" alt="Night Parade performing live on stage"></div>
+          <div class="stub-body">
+            <span class="stub-kicker">Active — Louisville, KY</span>
+            <h3 class="stub-name">Night Parade</h3>
+            <span class="stub-genre">Alternative Rock</span>
+            <p class="stub-desc">A full-band alt-rock project built on original songwriting and dynamic, guitar-driven arrangements.</p>
+          </div>
+        </div>
+        <div class="stub">
+          <div class="stub-photo"><img src="images/gonzofest.jpg" alt="Cade Howard performing at Gonzofest"></div>
+          <div class="stub-body">
+            <span class="stub-kicker">Active — Louisville, KY</span>
+            <h3 class="stub-name">Sporelord</h3>
+            <span class="stub-genre">Heavy Psych Rock</span>
+            <p class="stub-desc">Riff-forward, heavy psych rock built for festival stages and rooms that want volume with texture.</p>
+          </div>
+        </div>
+        <div class="stub">
+          <div class="stub-photo"><img src="images/blues-vocal.jpg" alt="Cade Howard singing and playing guitar"></div>
+          <div class="stub-body">
+            <span class="stub-kicker">Active — Louisville, KY</span>
+            <h3 class="stub-name">Oddjob</h3>
+            <span class="stub-genre">Spy-Themed Retro Covers</span>
+            <p class="stub-desc">A spy-themed party band reinterpreting classic rock, dance, and funk covers — built for venues that want a crowd on its feet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alumni-row">
+        <span class="alumni-label">Past Projects</span>
+        <div class="alumni-list">
+          <div class="alumni-chip">
+            <img src="images/zardoz.jpg" alt="Zardoz band photo">
+            <div class="alumni-chip-text">
+              <span class="alumni-chip-name">Zardoz</span>
+              <span class="alumni-chip-sub">Progressive Rock — Owensboro, KY</span>
+            </div>
+          </div>
+          <div class="alumni-chip">
+            <img src="images/ted-tyro.jpg" alt="Ted Tyro band photo">
+            <div class="alumni-chip-text">
+              <span class="alumni-chip-name">Ted Tyro</span>
+              <span class="alumni-chip-sub">Indie Rock — Louisville, KY</span>
+            </div>
+          </div>
+          <div class="alumni-chip">
+            <img src="images/band-outdoor2.jpg" alt="Hounds and Horns band photo">
+            <div class="alumni-chip-text">
+              <span class="alumni-chip-name">Hounds &amp; Horns</span>
+              <span class="alumni-chip-sub">Folk Rock — Owensboro, KY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="music">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Listen &amp; Watch</span>
+          <h2 class="section-title">Music &amp; video</h2>
+        </div>
+        <p class="section-note">Original recordings on Bandcamp, live footage on YouTube, and regular show updates on Instagram and Facebook.</p>
+      </div>
+
+      <div class="media-grid">
+        <div class="bandcamp-embed">
+          <iframe title="Cade Howard on Bandcamp" src="https://bandcamp.com/EmbeddedPlayer/v=2/album=3312489560/size=large/bgcol=171d27/linkcol=6e8cae/tracklist=true/artwork=small/transparent=true/" seamless>
+            <a href="https://cadehoward.bandcamp.com/album/until-now">...Until Now, by Cade Howard</a>
+          </iframe>
+        </div>
+        <div class="platform-links">
+          <a class="platform-card" href="https://www.youtube.com/@CadeHowardMusic/" target="_blank" rel="noopener">
+            <div>
+              <span class="platform-name">YouTube</span>
+              <span class="platform-sub">Full channel — live sets &amp; playing examples</span>
+            </div>
+            <span class="platform-arrow">→</span>
+          </a>
+          <a class="platform-card" href="https://cadehoward.bandcamp.com/" target="_blank" rel="noopener">
+            <div>
+              <span class="platform-name">Bandcamp</span>
+              <span class="platform-sub">Full catalog of original releases</span>
+            </div>
+            <span class="platform-arrow">→</span>
+          </a>
+          <a class="platform-card" href="https://www.instagram.com/cadehowardmusic/" target="_blank" rel="noopener">
+            <div>
+              <span class="platform-name">Instagram</span>
+              <span class="platform-sub">Clips, show announcements, behind the scenes</span>
+            </div>
+            <span class="platform-arrow">→</span>
+          </a>
+          <a class="platform-card" href="https://www.facebook.com/cadehowardmusic/" target="_blank" rel="noopener">
+            <div>
+              <span class="platform-name">Facebook</span>
+              <span class="platform-sub">Show listings &amp; updates</span>
+            </div>
+            <span class="platform-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="video-section-label">Live performance videos</p>
+      <div class="video-grid">
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/d5inO27LNDQ" title="Cade Howard performance video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/jy-qXlghbDw" title="Cade Howard performance video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/OnMgtJ9YRT8" title="Cade Howard performance video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/CNnBdFbOJdQ" title="Cade Howard performance video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/hOH13KVynpw" title="Cade Howard performance video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">On Stage</span>
+          <h2 class="section-title">Photos</h2>
+        </div>
+        <p class="section-note">A cross-section of rooms, bands, and configurations — from festival stages to listening rooms.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <a href="images/band-beeryoga.jpg" target="_blank" class="g-wide"><img src="images/band-beeryoga.jpg" alt="Full band performing on stage with green lighting"></a>
+        <a href="images/festival-solo.jpg" target="_blank" class="g-tall"><img src="images/festival-solo.jpg" alt="Cade Howard playing guitar at an outdoor festival"></a>
+        <a href="images/band-outdoor1.jpg" target="_blank"><img src="images/band-outdoor1.jpg" alt="Trio performing outdoors under colored stage lighting"></a>
+        <a href="images/hero.jpg" target="_blank"><img src="images/hero.jpg" alt="Silhouetted guitar performance in black and white"></a>
+        <a href="images/band-outdoor2.jpg" target="_blank" class="g-wide"><img src="images/band-outdoor2.jpg" alt="Full band performing outdoors on a lit stage"></a>
+        <a href="images/blue-stage.jpg" target="_blank" class="g-tall"><img src="images/blue-stage.jpg" alt="Cade Howard performing under blue stage lighting"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Get In Touch</span>
+          <h2 class="section-title">Book Cade for your venue</h2>
+        </div>
+      </div>
+
+      <div class="booking-grid">
+        <div>
+          <ul class="booking-list">
+            <li>Versatile repertoire spanning blues, jazz, classic rock, pop, and progressive rock</li>
+            <li>Original material and cover sets, tailored to the room</li>
+            <li>Available solo, as a duo, or with a full band</li>
+            <li>Also works as a live sound engineer, so setup and levels are never a mystery</li>
+            <li>Professional gear and fast, clean setup</li>
+            <li>Twenty years of regional stage experience</li>
+          </ul>
+        </div>
+        <div class="contact-block">
+          <span class="contact-label">Email</span>
+          <a class="contact-value" href="mailto:cadehowardmusic@gmail.com">cadehowardmusic@gmail.com</a>
+          <span class="contact-label">Phone</span>
+          <a class="contact-value" href="tel:+12704851123">(270) 485-1123</a>
+          <a class="btn btn-solid" href="mailto:cadehowardmusic@gmail.com?subject=Booking%20Inquiry">Send a booking inquiry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="footer-mark">Cade Howard</span>
+      <ul class="footer-socials">
+        <li><a href="https://cadehoward.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a></li>
+        <li><a href="https://www.youtube.com/@CadeHowardMusic/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.instagram.com/cadehowardmusic/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/cadehowardmusic/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <p class="footer-fine">Louisville, Kentucky &middot; Guitarist &amp; Vocalist &middot; Available for bookings</p>
+  </div>
+</footer>
+
+</body>
+</html>
